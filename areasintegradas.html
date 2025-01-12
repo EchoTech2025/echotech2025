@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas Integradas</title>
+    <style>
+         body, html {
+            overflow-x: hidden; /* Impede o deslizamento horizontal */
+        }
+        body {
+            font-family: 'Open Sans', sans-serif; /* Definindo a fonte */
+            margin: 0; /* Remove a margem padrão do body */
+            padding: 0; /* Remove o preenchimento padrão do body */
+        }
+        /* Media Query para telas pequenas (como smartphones) */
+        @media (max-width: 768px) {
+            /* Ajustes no menu de navegação */
+            nav {
+                flex-direction: column; /* Alinha os itens do menu verticalmente */
+                text-align: center; /* Centraliza os itens */
+            }
+
+            nav ul {
+                display: block; /* Muda de flex para block */
+                margin-top: 20px;
+            }
+
+            nav li {
+                margin: 10px 0; /* Diminui o espaço entre os itens do menu */
+                font-size: 16px; /* Ajusta o tamanho da fonte para dispositivos menores */
+            }
+
+            /* Ajuste nos botões */
+            .imagem-interativa {
+                width: 200px; /* Diminui o tamanho dos botões em telas pequenas */
+            }
+
+            /* Ajustes nas imagens de fundo */
+            div[style*="position: relative; text-align: center;"] {
+                height: 400px; /* Diminui a altura da área de fundo para dispositivos menores */
+            }
+
+            /* Ajuste nas imagens principais (fundo e logotexto) */
+            img[src="Imagens do site/logotexto.jpeg"] {
+                width: 140px; /* Reduz o tamanho do logo em telas pequenas */
+            }
+            
+            /* Ajustes nos textos */
+            ul li {
+                font-size: 22px; /* Diminui o tamanho da fonte do texto */
+            }
+
+            /* Ajuste da posição de alguns textos */
+            .imagem-interativa {
+                width: 200px;
+                position: relative;
+                top: 170%;
+            }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+        }
+        header {
+            text-align: center;
+            margin-top: 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            color: #333;
+        }
+        header h2 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #666;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            width: 100%;
+            max-width: 1200px;
+            box-sizing: border-box;
+        }
+        .gallery-item {
+            text-align: center;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+        }
+        .gallery-item p {
+            margin: 10px;
+            font-size: 1em;
+            color: #333;
+        }
+        .text-boxes {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .text-box {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e3f2fd; /* Azul claro */
+            border: 2px solid Lime; 
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 210px;
+            width: 18%;
+            text-align: justify;
+        }
+        .text-box-container {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div> <!-- Div 1 início -->
+        <div> <!-- Div 2 início -->
+                <img src="Imagens do site/logotexto.jpeg" alt="Logo" style="width: 170px; position: absolute; top: 8%; left: 7%; transform: translate(-50%, -50%);">
+                
+            <a href="http://www2.ifam.edu.br/">
+                <img src="Imagens do site/logoif.png" alt="Logo" style="width: 60px; position: absolute; top: 8%; left: 97%; transform: translate(-50%, -50%);">
+            </a>
+        </div> <!-- Div 2 fim -->
+    </div> <!-- Div 1 fim -->
+    
+    <header>
+        <h1>Áreas Integradas</h1>
+        <h2>Disciplinas da Grade Curricular</h2>
+    </header>
+
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="Imagens do site/disciplinaalgoritmo.png" alt="Foto 1">
+            <p>Algoritmo e Lógica de Programação</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Imagens do site/disciplinaweb.png" alt="Foto 2">
+            <p>Programação Dinâmica para Web</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Imagens do site/disciplinaarte.png" alt="Foto 3">
+            <p>Arte</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Imagens do site/disciplinageografia.png" alt="Foto 5">
+            <p>Geografia</p>
+        </div>
+        <div class="gallery-item">
+            <img src="Imagens do site/disciplinasociologia.png" alt="Foto 6">
+            <p>Sociologia</p>
+        </div>
+    </div>
+
+    <div class="text-box-container">
+        <div class="text-box">Algoritmo e Lógica de Programação: Essa disciplina é essencial para estruturar as funcionalidades do site. A lógica de programação permite criar sistemas eficientes e dinâmicos que otimizam a navegação e a interação dos usuários.
+        </div>
+        <div class="text-box">Programação Dinâmica para Web: Aqui, desenvolvemos o site propriamente dito, aplicando linguagens e ferramentas específicas para criar páginas interativas e responsivas, tornando a conscientização ambiental mais acessível e atrativa.
+        </div>
+        <div class="text-box">Arte: A disciplina de arte contribui para o design do site, garantindo uma estética agradável e um visual que chama atenção, além de usar cores e formas para reforçar a mensagem de conscientização.
+        </div>
+        <div class="text-box">Geografia: A geografia fornece o embasamento para abordar questões ambientais de forma regional e global, explicando os impactos das ações humanas no meio ambiente e sugerindo soluções adequadas.
+        </div>
+        <div class="text-box">Sociologia: Ela ajuda a entender como as pessoas interagem com o meio ambiente e entre si, permitindo que o site aborde questões sociais e ambientais de forma integrada e promova mudanças comportamentais positivas.
+        </div>
+    </div>
+</body>
+</html>
+
+

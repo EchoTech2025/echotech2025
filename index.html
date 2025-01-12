@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>EcoTech</title>
+    <style>
+        /* Estilos já existentes */
+        body, html {
+            overflow-x: hidden; /* Impede o deslizamento horizontal */
+        }
+        body {
+            font-family: 'Open Sans', sans-serif; /* Definindo a fonte */
+            margin: 0; /* Remove a margem padrão do body */
+            padding: 0; /* Remove o preenchimento padrão do body */
+        }
+        /* Estilo para remover o sublinhado dos links */
+        a {
+            text-decoration: none; /* Remove o sublinhado padrão */
+            color: black; /* Cor do texto */
+        }
+        a:hover {
+            text-decoration: none; /* Garante que não apareça sublinhado ao passar o mouse */
+        }
+
+        /* Media Query para telas pequenas (como smartphones) */
+        @media (max-width: 768px) {
+            /* Ajustes no menu de navegação */
+            nav {
+                flex-direction: column; /* Alinha os itens do menu verticalmente */
+                text-align: center; /* Centraliza os itens */
+            }
+
+            nav ul {
+                display: block; /* Muda de flex para block */
+                margin-top: 20px;
+            }
+
+            nav li {
+                margin: 10px 0; /* Diminui o espaço entre os itens do menu */
+                font-size: 16px; /* Ajusta o tamanho da fonte para dispositivos menores */
+            }
+
+            /* Ajustes nas imagens do slider */
+            div[style*="animation: slide"] img {
+                height: auto; /* Ajusta a altura da imagem para manter a proporção */
+                width: 100%; /* Garante que as imagens ocupem 100% da largura disponível */
+            }
+
+            /* Ajuste nos botões */
+            .imagem-interativa {
+                width: 200px; /* Diminui o tamanho dos botões em telas pequenas */
+            }
+
+            /* Ajustes nas imagens de fundo */
+            div[style*="position: relative; text-align: center;"] {
+                height: 400px; /* Diminui a altura da área de fundo para dispositivos menores */
+            }
+
+            /* Ajuste nas imagens principais (fundo e logotexto) */
+            img[src="Imagens do site/logotexto.jpeg"] {
+                width: 140px; /* Reduz o tamanho do logo em telas pequenas */
+            }
+            
+            /* Ajustes nos textos */
+            ul li {
+                font-size: 22px; /* Diminui o tamanho da fonte do texto */
+            }
+
+            /* Ajuste da posição de alguns textos */
+            .imagem-interativa {
+                width: 200px;
+                position: relative;
+                top: 170%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div style="max-width: 1440px; padding: 0 4%; margin: 0 auto;"> <!-- Div 1 início -->
+        <nav style="display: flex; justify-content: space-between; align-items: center;">
+
+            <div> <!-- Div 2 início -->
+                <img src="Imagens do site/logotexto.jpeg" alt="Logo" style="width: 170px;">
+            </div> <!-- Div 2 fim -->
+
+            <ul style="display: flex; align-items: center; list-style: none;">
+                <li style="margin: 0 30px; font-size: 18px;"><strong><a href="quemsomos.html">Quem Somos</a></strong></li>
+                <li style="margin: 0 30px; font-size: 18px;"><strong><a href="nossosobjetivos.html">Nossos Objetivos</a></strong></li>
+                <li style="margin: 0 30px; font-size: 18px;"><strong><a href="areasintegradas.html">Áreas Integradas</a></strong></li>
+                <li style="margin: 0 30px; font-size: 18px;"><strong><a href="http://www2.ifam.edu.br/">IFAM</a></strong></li>
+            </ul>
+        </nav>
+    </div> <!-- Div 1 fim -->
+
+    <div style="position: relative; text-align: center; overflow: hidden; height: 620px;"> <!-- Div 3 início -->
+    <!-- Contêiner das imagens que deslizam -->
+    <div style="display: flex; width: 100%; height: 100%; animation: slide 30s infinite;"> <!-- Div 4 início -->
+        <img src="Imagens do site/imagemprincipal1.jpeg" alt="Fundo 1" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="Imagens do site/imagemprincipal2.jpg" alt="Fundo 2" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="Imagens do site/imagemprincipal3.jpg" alt="Fundo 3" style="width: 100%; height: 100%; object-fit: cover;">
+    </div> <!-- Div 4 fim -->
+
+    <!-- Texto -->
+    <ul style="position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%); list-style: none; color: white;">
+        <li style="font-size: 30px;"><strong>Olá, seja bem vindo(a) ao EcoTech!</strong></li>
+        <li style="font-size: 30px;"><strong>Tenha conhecimento ambiental e</strong></li>
+        <li style="font-size: 30px;"><strong>sustentável na palma da sua mão.</strong></li>
+    </ul>
+</div> <!-- Div 3 fim -->
+
+<!-- CSS -->
+<style>
+/* Animação do slider */
+@keyframes slide {
+    0% { transform: translateX(0); } /* Primeira imagem visível */
+    20% { transform: translateX(0); } /* Primeira imagem permanece */
+    27% { transform: translateX(-100%); } /* Transição para a segunda imagem */
+    47% { transform: translateX(-100%); } /* Segunda imagem permanece */
+    54% { transform: translateX(-200%); } /* Transição para a terceira imagem */
+    74% { transform: translateX(-200%); } /* Terceira imagem permanece */
+    100% { transform: translateX(0); } /* Volta para a primeira imagem */
+}
+
+/* Contêiner que desliza */
+div[style*="animation: slide"] {
+    animation: slide 30s infinite; /* Duração total: 30s para o ciclo completo */
+    animation-timing-function: ease-in-out; /* Suavidade na transição */
+}
+
+/* Controle das imagens */
+div[style*="animation: slide"] img {
+    flex-shrink: 0; /* Cada imagem ocupa 100% da largura */
+}
+</style>
+
+
+<div> <!-- Div 5 início -->
+    <p style="font-size: 30px; text-align: center;"><strong>Juntos podemos fazer a diferença!</strong></p>
+    <img src="Imagens do site/imagem2.png" alt="Logo" style="width: 150px; position: absolute; top: 120%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+    <img src="Imagens do site/imagem3.png" alt="Logo" style="width: 160px; position: absolute; top: 120%; left: 50%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+    <img src="Imagens do site/imagem4.png" alt="Logo" style="width: 160px; position: absolute; top: 120%; left: 65%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+    <p style="font-size: 30px; text-align: center; position: absolute; top: 130%; left: 28%"><strong>Pequenas atitudes geram grandes resultados!</p>
+</div> <!-- Div 5 fim -->
+
+<div> <!-- Div 6 início -->
+    <!-- Botão mudanças climáticas -->
+    <a href="pgclima.php">
+        <img src="Imagens do site/botão de clima.jpg" alt="Botão mudanças climáticas" class="imagem-interativa" style="width: 250px; position: absolute; top: 155%; left: 20%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    <!-- Botão consumo de energia -->
+    <a href="pgenergia.php">
+        <img src="Imagens do site/botão de energia.jpg" alt="Botão consumo de energia" class="imagem-interativa" style="width: 250px; position: absolute; top: 155%; left: 50%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    <!-- Botão desmatamento -->
+    <a href="pgdesmatamento.php">
+        <img src="Imagens do site/botão de desmatamento.jpg" alt="Botão desmatamento" class="imagem-interativa" style="width: 250px; position: absolute; top: 155%; left: 80%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    <!-- Botão descarte de resíduos -->
+    <a href="pglixo.php">
+        <img src="Imagens do site/botão de resíduos.jpg" alt="Botão descarte de resíduos" class="imagem-interativa" style="width: 250px; position: absolute; top: 180%; left: 20%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    <!-- Botão desastres ambientais -->
+    <a href="pgdesastres.php">
+        <img src="Imagens do site/botão de desastres.jpg" alt="Botão desastres ambientais" class="imagem-interativa" style="width: 250px; position: absolute; top: 180%; left: 50%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    <!-- Botão impacto de TI -->
+    <a href="pgti.php">
+        <img src="Imagens do site/botão de TI.jpg" alt="Botão impacto de TI" class="imagem-interativa" style="width: 250px; position: absolute; top: 180%; left: 80%; transform: translate(-50%, -50%); border-radius: 15px;">
+    </a>
+    
+    <style>
+        .imagem-interativa {
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para escala e sombra */
+}
+
+.imagem-interativa:hover {
+    transform: scale(1.8); /* Aumenta 10% ao passar o mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao passar o mouse */
+}
+    </style>
+</div> <!-- Div 6 fim -->
+
+<div> <!-- Div 7 início -->
+<p style="font-size: 30px; position: absolute; top: 200%; left: 44%;"><strong>Como ajudar?</p>
+<p style="font-size: 25px; position: absolute; top: 220%; left: 50.5%;"><strong>Reduzir, reutilizar e reciclar</p>
+<img src="Imagens do site/imagem5.jpg" style="width: 350px; position: absolute; top: 238%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 226%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+    Adote a prática dos "3 Rs": Reduza o consumo desnecessário, reutilize itens sempre que possível e recicle materiais como plástico, papel, vidro e metal.
+    Um simples ato, como separar o lixo reciclável, ajuda a reduzir a poluição e o desperdício de recursos naturais.
+</p>
+</div> <!-- Div 7 fim -->
+
+<div> <!-- Div 8 início -->
+<p style="font-size: 25px; position: absolute; top: 258%; left: 50.5%;"><strong>Diminuir o consumo de energia</p>
+<img src="Imagens do site/imagem6.jpg" style="width: 350px; position: absolute; top: 277%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 264%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+Troque lâmpadas comuns por modelos de LED, que consomem até 80% menos energia.
+Desligue aparelhos eletrônicos quando não estiverem em uso e opte por eletrodomésticos com selo de eficiência energética.
+</p>
+</div> <!-- Div 8 fim -->
+
+<div> <!-- Div 8 início -->
+<p style="font-size: 25px; position: absolute; top: 300%; left: 50.5%;"><strong>Adotar meios de transporte sustentáveis</p>
+<img src="Imagens do site/imagem7.png" style="width: 350px; position: absolute; top: 320%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 306%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+Sempre que possível, prefira caminhar, andar de bicicleta ou usar transporte público.
+Se tiver um carro, opte por caronas compartilhadas ou veículos elétricos para reduzir a emissão de gases poluentes.
+</p>
+</div> <!-- Div 8 fim -->
+
+<div> <!-- Div 9 início -->
+<p style="font-size: 25px; position: absolute; top: 343%; left: 50.5%;"><strong>Comprar de forma consciente</p>
+<img src="Imagens do site/imagem8.jpeg" style="width: 350px; position: absolute; top: 360%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 349%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+Dê preferência a produtos com embalagens sustentáveis, de empresas que adotam práticas ambientalmente responsáveis.
+Reduza o consumo de carne, já que a pecuária é uma das maiores fontes de emissão de gases de efeito estufa.
+</p>
+</div> <!-- Div 9 fim -->
+
+<div> <!-- Div 10 início -->
+<p style="font-size: 25px; position: absolute; top: 381%; left: 50.5%;"><strong>Plantar árvores e cuidar de áreas verdes</p>
+<img src="Imagens do site/imagem9.jpg" style="width: 350px; position: absolute; top: 400%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 387%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+Árvores absorvem dióxido de carbono, ajudam a melhorar a qualidade do ar e oferecem abrigo para a fauna.
+Participe de iniciativas de plantio ou ajude a manter parques e áreas verdes na sua comunidade.
+</p>
+</div> <!-- Div 10 fim -->
+
+<div> <!-- Div 11 início -->
+<p style="font-size: 25px; position: absolute; top: 424%; left: 50.5%;"><strong>Educar e conscientizar</p>
+<img src="Imagens do site/imagem10.jpg" style="width: 350px; position: absolute; top: 443%; left: 35%; transform: translate(-50%, -50%); opacity: 2.0;"/>
+<p style="font-size: 18px; position: absolute; top: 430%; left: 40%; font-weight: normal; text-align: justify; padding-left: 160px; padding-right: 160px;">
+Compartilhe informações sobre práticas sustentáveis com amigos, familiares e colegas.
+A educação ambiental é uma ferramenta poderosa para promover mudanças significativas no comportamento coletivo.
+</p>
+</div> <!-- Div 11 fim -->
+
+<!-- Div 12 -->
+<div> <!-- Div 12 início -->
+    <p style="font-size: 30px; position: absolute; top: 470%; left: 19%;"><strong>Divirta-se com jogos educativos sobre a conscientização ambiental</strong></p>
+    <a href="https://scratch.mit.edu/projects/161557662">
+        <img src="Imagens do site/imagemdejogo1.png" class="imagem-interativa" style="width: 250px; position: absolute; top: 500%; left: 20%; transform: translate(-50%, -50%); opacity: 2.0; border-radius: 15px;">
+    <p style="font-size: 20px; position: absolute; top: 510%; left: 10%;"><strong>Jogo do Meio Ambiente - Linen</strong></p>
+    </a>
+</div> <!-- Div 12 fim -->
+
+<!-- Div 13 -->
+<div> <!-- Div 13 início -->
+    <a href="https://scratch.mit.edu/projects/157455417">
+        <img src="Imagens do site/imagemdejogo2.png" class="imagem-interativa" style="width: 250px; position: absolute; top: 500%; left: 50%; transform: translate(-50%, -50%); opacity: 2.0; border-radius: 15px;">
+    <p style="font-size: 20px; position: absolute; top: 510%; left: 42.5%;"><strong>Quiz do Meio Ambiente</strong></p>
+    </a>
+</div> <!-- Div 13 fim -->
+
+<!-- Div 14 -->
+<div> <!-- Div 14 início -->
+    <a href="https://scratch.mit.edu/projects/543408523">
+        <img src="Imagens do site/imagemdejogo3.png" class="imagem-interativa" style="width: 250px; position: absolute; top: 500%; left: 80%; transform: translate(-50%, -50%); opacity: 2.0; border-radius: 15px;">
+    <p style="font-size: 20px; position: absolute; top: 510%; left: 73%;"><strong>Jogo de Coleta de Lixo</strong></p>
+    </a>
+
+<style>
+    .imagem-interativa {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave para escala e sombra */
+    }
+    .imagem-interativa:hover {
+        transform: scale(1.1); /* Aumenta 10% ao passar o mouse */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra ao passar o mouse */
+    }
+</style>
+</div> <!-- Div 14 fim -->
+
+<!-- Div final da página -->
+<div style="background: linear-gradient(SpringGreen, Lime); padding: 80px; text-align: center; position: absolute; width: 100%; top: 550%;">
+    <p style="color: white; font-size: 24px; font-weight: bold; margin: 0;">Siga nossas redes sociais:</p>
+    <div style="margin-top: 15px;">
+        <!-- Logo do Instagram -->
+        <a href="https://www.instagram.com" target="_blank" style="margin: 0 15px;">
+            <img src="Imagens do site/logoinstagram.webp" alt="Instagram" style="width: 40px; height: 40px; transition: transform 0.3s ease;">
+        <!-- Logo do X (antigo Twitter) -->
+        <a href="https://x.com/EchoTech2025?t=dffgwgOmGrYZO2B1I5BYUg&s=08" target="_blank" style="margin: 0 15px;">
+            <img src="Imagens do site/logox.avif" alt="Twitter" style="width: 40px; height: 40px; border-radius: 10%; transition: transform 0.3s ease;">
+        </a>
+        <!-- Logo do TikTok -->
+        <a href="https://www.tiktok.com/@echotech2025?_t=ZM-8sotviJc8hx&_r=1" target="_blank" style="margin: 0 15px;">
+            <img src="Imagens do site/logotiktok.webp" alt="TikTok" style="width: 40px; height: 40px; border-radius: 10%; transition: transform 0.3s ease;">
+        </a>
+    </div>
+</div>
+
+
+</body>
+</html>
